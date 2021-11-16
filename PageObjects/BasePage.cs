@@ -71,6 +71,7 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
             if (Exists())
             {
                 CLogs.Info("The page was successfuly open.");
+                CLogs.Screen(Driver);
                 return (T)this;
             }
 

@@ -57,7 +57,6 @@ namespace JuribaKayak.SearchUIAutomation.Helpers
                 return true;
             }
         }
-        #endregion
 
         /// <summary>
         /// Wait until element is invisible.
@@ -125,5 +124,27 @@ namespace JuribaKayak.SearchUIAutomation.Helpers
                 return false;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="webDrEl">WebDriver or WebElement</param>
+        /// <param name="locator">Locator.</param>
+        /// <returns></returns>
+        public static bool ElementExists(this ISearchContext webDrEl, By locator)
+        {
+            try
+            {
+                webDrEl.FindElement(locator); 
+            }
+            catch (NoSuchElementException)
+            {
+                return false; 
+            }
+            return true;
+        }
+
+        #endregion
+
     }
 }

@@ -24,9 +24,14 @@ namespace JuribaKayak.SearchUIAutomation.Features
 	I want to: search the tickets using the search form
 	So that: search outcome will show tickets that correspond to search criteria
 
-	We could've used a scenario outline here but scenarios are too different for that
+	PS:
+	We could've used a scenario outline here but scenarios are too different for that.
+
 	Basically the search functionality itself is one of the first candidates for API testing, 
-	but the test assignment specification requires to use Selenium. ", SourceFile="Features\\Search.feature", SourceLine=0)]
+	but the test assignment specification requires to use Selenium.
+
+	Ideally screenshots should be tacken when smth goes wrong but for that I need to 
+	implement scrolling to the desired ticket item which can't be done due to lack of time.", SourceFile="Features\\Search.feature", SourceLine=0)]
     public partial class SearchPlaneTicketsAtHttpsKayak_ComFeature
     {
         
@@ -46,9 +51,14 @@ namespace JuribaKayak.SearchUIAutomation.Features
 	I want to: search the tickets using the search form
 	So that: search outcome will show tickets that correspond to search criteria
 
-	We could've used a scenario outline here but scenarios are too different for that
+	PS:
+	We could've used a scenario outline here but scenarios are too different for that.
+
 	Basically the search functionality itself is one of the first candidates for API testing, 
-	but the test assignment specification requires to use Selenium. ", ProgrammingLanguage.CSharp, ((string[])(null)));
+	but the test assignment specification requires to use Selenium.
+
+	Ideally screenshots should be tacken when smth goes wrong but for that I need to 
+	implement scrolling to the desired ticket item which can't be done due to lack of time.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -86,7 +96,7 @@ namespace JuribaKayak.SearchUIAutomation.Features
         
         [TechTalk.SpecRun.ScenarioAttribute("Search plane tickets in one-way direction for 1 adult person", new string[] {
                 "oneway",
-                "single"}, SourceLine=12)]
+                "single"}, SourceLine=17)]
         public virtual void SearchPlaneTicketsInOne_WayDirectionFor1AdultPerson()
         {
             string[] tagsOfScenario = new string[] {
@@ -94,7 +104,7 @@ namespace JuribaKayak.SearchUIAutomation.Features
                     "single"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search plane tickets in one-way direction for 1 adult person", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 13
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -120,7 +130,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "Adults",
                             "1"});
-#line 14
+#line 19
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table1, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -139,22 +149,22 @@ this.ScenarioInitialize(scenarioInfo);
                             "MOW",
                             "2021-11-25",
                             "--"});
-#line 17
+#line 22
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table2, "And ");
 #line hidden
-#line 20
+#line 25
  testRunner.When("search button is pressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
+#line 26
  testRunner.Then("every item on the outcome first page has \'1\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 22
+#line 27
  testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 28
  testRunner.And("every item on the outcome first page has \'1\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 29
  testRunner.And("no duplicates - not sure I need it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -163,7 +173,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Search plane tickets for a round trip for 1 adult person", new string[] {
                 "roundtrip",
-                "single"}, SourceLine=26)]
+                "single"}, SourceLine=31)]
         public virtual void SearchPlaneTicketsForARoundTripFor1AdultPerson()
         {
             string[] tagsOfScenario = new string[] {
@@ -171,7 +181,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "single"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search plane tickets for a round trip for 1 adult person", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 27
+#line 32
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -197,7 +207,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "Adults",
                             "1"});
-#line 28
+#line 33
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table3, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -215,23 +225,23 @@ this.ScenarioInitialize(scenarioInfo);
                             "UFA",
                             "MOW",
                             "2021-11-25",
-                            "--"});
-#line 31
+                            "2021-11-27"});
+#line 36
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table4, "And ");
 #line hidden
-#line 34
+#line 39
  testRunner.When("search button is pressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 35
+#line 40
  testRunner.Then("every item on the outcome first page has \'2\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 36
+#line 41
  testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 42
  testRunner.And("every item on the outcome first page has \'1\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 43
  testRunner.And("no duplicates - not sure I need it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -240,7 +250,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Search plane tickets for a round trip for 2 adult person", new string[] {
                 "roundtrip",
-                "two"}, SourceLine=41)]
+                "two"}, SourceLine=45)]
         public virtual void SearchPlaneTicketsForARoundTripFor2AdultPerson()
         {
             string[] tagsOfScenario = new string[] {
@@ -248,7 +258,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "two"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search plane tickets for a round trip for 2 adult person", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 42
+#line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -274,7 +284,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table5.AddRow(new string[] {
                             "Adults",
                             "2"});
-#line 43
+#line 47
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table5, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -293,22 +303,22 @@ this.ScenarioInitialize(scenarioInfo);
                             "MOW",
                             "2021-11-25",
                             "2021-11-27"});
-#line 46
+#line 50
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table6, "And ");
 #line hidden
-#line 49
+#line 53
  testRunner.When("search button is pressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 54
  testRunner.Then("every item on the outcome first page has \'2\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 51
+#line 55
  testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 56
  testRunner.And("every item on the outcome first page has \'2\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 57
  testRunner.And("no duplicates - not sure I need it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

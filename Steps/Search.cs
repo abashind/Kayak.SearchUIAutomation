@@ -1,7 +1,10 @@
-﻿using JuribaKayak.SearchUIAutomation.Helpers;
+﻿using FluentAssertions;
+using FluentAssertions.Execution;
+using JuribaKayak.SearchUIAutomation.Helpers;
 using JuribaKayak.SearchUIAutomation.Models;
 using JuribaKayak.SearchUIAutomation.PageObjects;
 using System.Collections.Generic;
+using System.Linq;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -14,6 +17,7 @@ namespace JuribaKayak.SearchUIAutomation.Steps
 
         private IEnumerable<AmountOfTravelers> travelers;
         private FlightParams fps;
+        private SearchResultsPage resultPage;
 
         #endregion
 
@@ -28,18 +32,22 @@ namespace JuribaKayak.SearchUIAutomation.Steps
             fps = table.CreateInstance<FlightParams>();
 
         [When(@"search button is pressed")]
-        public void WhenSearchButtonIsPressed()
-        {
-            var resultPage = new SearchResultsPage()
+        public void WhenSearchButtonIsPressed() => 
+            resultPage = new SearchResultsPage()
                 .Open<SearchResultsPage>(MiscUtils.BuildRequest(fps, travelers));
 
-            resultPage.CloseBrowser();
-        }
-
         [Then(@"every item on the outcome first page has '(.*)' flights")]
-        public void ThenEveryItemOnTheOutcomeFirstPageHasFlights(int p0)
+        public void ThenEveryItemOnTheOutcomeFirstPageHasFlights(int numberOfFlights)
         {
-
+            using (new AssertionScope())
+            {
+                foreach (var item in resultPage.TicketItems)
+                {
+                    CLogs.Info($"Check number of flights for `{item.Name}` ticket item.");
+                    item.NumberOfFlights()
+                        .Should().Be(numberOfFlights, "Found ticket items should have designated number of flights.");
+                }
+            }
         }
 
         [Then(@"the flight/s have the right direction")]
@@ -48,8 +56,17 @@ namespace JuribaKayak.SearchUIAutomation.Steps
         }
 
         [Then(@"every item on the outcome first page has '(.*)' seat")]
-        public void ThenEveryItemOnTheOutcomeFirstPageHasSeat(int p0)
+        public void ThenEveryItemOnTheOutcomeFirstPageHasSeat(int numberOfSeats)
         {
+            using (new AssertionScope())
+            {
+                foreach (var item in resultPage.TicketItems)
+                {
+                    CLogs.Info($"Check number of seats for `{item.Name}` ticket item.");
+                    item.NumberOfSeats
+                        .Should().Be(numberOfSeats, "Found ticket items should have designated number of seats.");
+                }
+            }
         }
 
         [Then(@"no duplicates - not sure I need it")]
@@ -58,8 +75,5 @@ namespace JuribaKayak.SearchUIAutomation.Steps
         }
 
         #endregion
-
-
-
     }
 }

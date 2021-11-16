@@ -1,5 +1,8 @@
-﻿using JuribaKayak.SearchUIAutomation.PageObjects.Controls;
+﻿using JuribaKayak.SearchUIAutomation.Helpers;
+using JuribaKayak.SearchUIAutomation.PageObjects.Controls;
 using OpenQA.Selenium;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace JuribaKayak.SearchUIAutomation.PageObjects
 {
@@ -14,6 +17,11 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
         #region Fields and properties
 
         public Button MoreButton;
+
+        private By ticketItemLocator => By.ClassName("Base-Results-HorizonResult");
+
+        public IEnumerable<TicketItem> TicketItems => Driver.FindElements(ticketItemLocator)
+            .Select(e => new TicketItem(By.Id(e.GetAttribute("id"))));
 
         #endregion
 
@@ -30,17 +38,4 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
         #endregion
     }
 }
-//Design:
-
-//TicketItem POM.
-
-//Find all ticket items elements.
-
-//Transform every element to TicketItem POM.
-
-//TicketItem has: NumberOfFlights(return int), GetFlights(return Flight POM), NumberOfSeats(return int).
-
-//Flight has: direction, depart time, arrival time, company.
-
-//Do checks.
 
