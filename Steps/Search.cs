@@ -19,8 +19,6 @@ namespace JuribaKayak.SearchUIAutomation.Steps
 
         #region Steps
 
-        #endregion
-
         [Given(@"the next amount of travelers wants to fly out:")]
         public void GivenTheNextAmountOfTravelersWantsToFlyOut(Table table) =>
             travelers = table.CreateSet<AmountOfTravelers>();
@@ -34,14 +32,17 @@ namespace JuribaKayak.SearchUIAutomation.Steps
         {
             var resultPage = new SearchResultsPage()
                 .Open<SearchResultsPage>(MiscUtils.BuildRequest(fps, travelers));
+
+            resultPage.CloseBrowser();
         }
 
         [Then(@"every item on the outcome first page has '(.*)' flights")]
         public void ThenEveryItemOnTheOutcomeFirstPageHasFlights(int p0)
         {
+
         }
 
-        [Then(@"the flight has the right direction")]
+        [Then(@"the flight/s have the right direction")]
         public void ThenTheFlightHasTheRightDirection()
         {
         }
@@ -50,5 +51,15 @@ namespace JuribaKayak.SearchUIAutomation.Steps
         public void ThenEveryItemOnTheOutcomeFirstPageHasSeat(int p0)
         {
         }
+
+        [Then(@"no duplicates - not sure I need it")]
+        public void ThenNoDuplicates_NotSureINeedIt()
+        {
+        }
+
+        #endregion
+
+
+
     }
 }

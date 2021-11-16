@@ -7,5 +7,7 @@ namespace JuribaKayak.SearchUIAutomation
         public const bool HeadlessMode = false;
 
         public static Drivers CurrentDriverType = Drivers.Chrome;
+
+        public static string FlightApiUri = "https://www.kayak.com/flights/";
     }
 }

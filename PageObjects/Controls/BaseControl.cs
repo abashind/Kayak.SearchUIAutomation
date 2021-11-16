@@ -76,7 +76,7 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects.Controls
                     result = el.Displayed && el.Enabled;
                     if (result) break;
                     CLogs.Info($"Element with locator {Locator} is not visible, waiting.");
-                    Thread.Sleep(TimeSpan.FromMilliseconds(500));
+                    Thread.Sleep(TimeSpan.FromSeconds(1));
                 }
             }
             catch (Exception) { }

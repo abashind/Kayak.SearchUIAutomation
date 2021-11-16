@@ -2,7 +2,7 @@
 {
     public class AmountOfTravelers
     {
-        string Type;
-        int Amount;
+        public string Type;
+        public int Amount;
     }
 }

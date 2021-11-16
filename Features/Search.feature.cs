@@ -118,28 +118,26 @@ this.ScenarioInitialize(scenarioInfo);
                             "Type",
                             "Amount"});
                 table1.AddRow(new string[] {
-                            "Adult",
+                            "Adults",
                             "1"});
 #line 14
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table1, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Direction",
                             "ClassOfService",
                             "CarryOnBags",
                             "CheckedBags",
                             "From",
                             "To",
-                            "When to there",
-                            "When back"});
+                            "WhenToThere",
+                            "WhenBack"});
                 table2.AddRow(new string[] {
-                            "One-way",
                             "Economy",
                             "0",
                             "0",
-                            "Ufa",
-                            "Moscow",
-                            "November 19, 2021",
+                            "UFA",
+                            "MOW",
+                            "2021-11-25",
                             "--"});
 #line 17
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table2, "And ");
@@ -151,7 +149,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("every item on the outcome first page has \'1\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 22
- testRunner.And("the flight has the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
  testRunner.And("every item on the outcome first page has \'1\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -197,13 +195,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "Type",
                             "Amount"});
                 table3.AddRow(new string[] {
-                            "Adult",
+                            "Adults",
                             "1"});
 #line 28
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table3, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Direction",
                             "ClassOfService",
                             "CarryOnBags",
                             "CheckedBags",
@@ -212,13 +209,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "When to there",
                             "When back"});
                 table4.AddRow(new string[] {
-                            "Round-trip",
                             "Economy",
                             "0",
                             "0",
-                            "Ufa",
-                            "Moscow",
-                            "November 19, 2021",
+                            "UFA",
+                            "MOW",
+                            "2021-11-25",
                             "--"});
 #line 31
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table4, "And ");
@@ -230,7 +226,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("every item on the outcome first page has \'2\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 36
- testRunner.And("the flights have the right directions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
  testRunner.And("every item on the outcome first page has \'1\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -276,13 +272,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "Type",
                             "Amount"});
                 table5.AddRow(new string[] {
-                            "Adult",
+                            "Adults",
                             "2"});
 #line 43
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table5, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Direction",
                             "ClassOfService",
                             "CarryOnBags",
                             "CheckedBags",
@@ -291,14 +286,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "When to there",
                             "When back"});
                 table6.AddRow(new string[] {
-                            "Round-trip",
                             "Economy",
                             "0",
                             "0",
-                            "Ufa",
-                            "Moscow",
-                            "November 19, 2021",
-                            "November 20, 2021"});
+                            "UFA",
+                            "MOW",
+                            "2021-11-25",
+                            "2021-11-27"});
 #line 46
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table6, "And ");
 #line hidden
@@ -309,7 +303,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("every item on the outcome first page has \'2\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 51
- testRunner.And("the flights have the right directions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 52
  testRunner.And("every item on the outcome first page has \'2\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

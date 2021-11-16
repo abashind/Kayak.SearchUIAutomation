@@ -12,28 +12,28 @@
 @oneway @single
 Scenario: Search plane tickets in one-way direction for 1 adult person
 	Given the next amount of travelers wants to fly out:
-	| Type  | Amount |
-	| Adult | 1      |
+	| Type   | Amount |
+	| Adults | 1      |
 	And the rest of search field are filled out with the next values:
-	| Direction | ClassOfService | CarryOnBags | CheckedBags | From | To     | WhenToThere       | WhenBack |
-	| One-way   | Economy        | 0           | 0           | Ufa  | Moscow | November 19, 2021 | --       |
+	| ClassOfService | CarryOnBags | CheckedBags | From | To  | WhenToThere | WhenBack |
+	| Economy        | 0           | 0           | UFA  | MOW | 2021-11-25  | --       |
 	When search button is pressed
 	Then every item on the outcome first page has '1' flights
-	And the flight has the right direction
+	And the flight/s have the right direction
 	And every item on the outcome first page has '1' seat
 	And no duplicates - not sure I need it
 
 @roundtrip @single
 Scenario: Search plane tickets for a round trip for 1 adult person
 	Given the next amount of travelers wants to fly out:
-	| Type  | Amount |
-	| Adult | 1      |
+	| Type   | Amount |
+	| Adults | 1      |
 	And the rest of search field are filled out with the next values:
-	| Direction  | ClassOfService | CarryOnBags | CheckedBags | From | To     | When to there     | When back |
-	| Round-trip | Economy        | 0           | 0           | Ufa  | Moscow | November 19, 2021 | --        |
+	| ClassOfService | CarryOnBags | CheckedBags | From | To  | When to there | When back |
+	| Economy        | 0           | 0           | UFA  | MOW | 2021-11-25    | --        |
 	When search button is pressed
 	Then every item on the outcome first page has '2' flights
-	And the flights have the right directions
+	And the flight/s have the right direction
 	And every item on the outcome first page has '1' seat
 	And no duplicates - not sure I need it
 
@@ -41,13 +41,13 @@ Scenario: Search plane tickets for a round trip for 1 adult person
 @roundtrip @two
 Scenario: Search plane tickets for a round trip for 2 adult person
 	Given the next amount of travelers wants to fly out:
-	| Type  | Amount |
-	| Adult | 2      |
+	| Type   | Amount |
+	| Adults | 2      |
 	And the rest of search field are filled out with the next values:
-	| Direction  | ClassOfService | CarryOnBags | CheckedBags | From | To     | When to there     | When back         |
-	| Round-trip | Economy        | 0           | 0           | Ufa  | Moscow | November 19, 2021 | November 20, 2021 |
+	| ClassOfService | CarryOnBags | CheckedBags | From | To  | When to there | When back  |
+	| Economy        | 0           | 0           | UFA  | MOW | 2021-11-25    | 2021-11-27 |
 	When search button is pressed
 	Then every item on the outcome first page has '2' flights
-	And the flights have the right directions
+	And the flight/s have the right direction
 	And every item on the outcome first page has '2' seat
 	And no duplicates - not sure I need it

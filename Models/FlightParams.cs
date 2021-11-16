@@ -2,13 +2,12 @@
 {
     public class FlightParams
     {
-        string Direction;
-        string ClassOfService;
-        int CarryOnBags;
-        int CheckedBags;
-        string From;
-        string To;
-        string WhenToThere;
-        string WhenBack;
+        public string ClassOfService;
+        public int CarryOnBags;
+        public int CheckedBags;
+        public string From;
+        public string To;
+        public string WhenToThere;
+        public string WhenBack;
     }
 }

@@ -25,7 +25,7 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
         /// <param name="secondsToWait"></param>
         /// <returns></returns>
         public override bool Exists(int secondsToWait = 20) =>
-            base.Exists(secondsToWait) && MoreButton.Exists();
+            base.Exists(secondsToWait) && MoreButton.Exists(waitElementIsVisible:30);
 
         #endregion
     }

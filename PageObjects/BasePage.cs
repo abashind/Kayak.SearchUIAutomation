@@ -74,7 +74,7 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
                 return (T)this;
             }
 
-            throw new UiException("Personal Information Page was not open.");
+            throw new UiException($"{Name} was not open.");
         }
 
         #endregion
