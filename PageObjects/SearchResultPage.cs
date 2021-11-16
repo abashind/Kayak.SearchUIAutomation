@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using JuribaKayak.SearchUIAutomation.PageObjects.Controls;
+using OpenQA.Selenium;
 
 namespace JuribaKayak.SearchUIAutomation.PageObjects
 {
@@ -7,12 +8,29 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
         public SearchResultsPage() : base()
         {
             this.CheckLocator = By.Id("searchResultsList");
+            this.MoreButton = new Button(By.CssSelector("[id$=\"loadMore\"]"));
         }
+
+        #region Fields and properties
+
+        public Button MoreButton;
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Example of the polymorphism.
+        /// </summary>
+        /// <param name="secondsToWait"></param>
+        /// <returns></returns>
+        public override bool Exists(int secondsToWait = 20) =>
+            base.Exists(secondsToWait) && MoreButton.Exists();
+
+        #endregion
     }
 }
 //Design:
-
-//Wait show more results button.
 
 //Find all ticket items elements.
 

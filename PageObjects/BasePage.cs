@@ -40,7 +40,7 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
         /// </summary>
         /// <param name="secondsToWait"></param>
         /// <returns></returns>
-        public bool Exists(int secondsToWait = 20)
+        public virtual bool Exists(int secondsToWait = 20)
         {
             var result = false;
             try
