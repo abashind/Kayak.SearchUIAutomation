@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using JuribaKayak.SearchUIAutomation.Models;
+using System.Collections.Generic;
+using System.IO;
 
 namespace JuribaKayak.SearchUIAutomation.Helpers
 {
@@ -28,6 +30,11 @@ namespace JuribaKayak.SearchUIAutomation.Helpers
             }
 
             return false;
+        }
+
+        public static string BuildRequest(FlightParams fps, IEnumerable<AmountOfTravelers> travelers)
+        {
+            return "Bad request.";
         }
     }
 }

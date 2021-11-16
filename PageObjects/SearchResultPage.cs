@@ -32,6 +32,8 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects
 }
 //Design:
 
+//TicketItem POM.
+
 //Find all ticket items elements.
 
 //Transform every element to TicketItem POM.
