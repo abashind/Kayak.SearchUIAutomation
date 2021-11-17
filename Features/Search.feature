@@ -26,7 +26,6 @@ Scenario: Search plane tickets in one-way direction for 1 adult person
 	Then every item on the outcome first page has '1' flights
 	And the flight/s have the right direction
 	And every item on the outcome first page has '1' seat
-	And no duplicates - not sure I need it
 
 @roundtrip @single
 Scenario: Search plane tickets for a round trip for 1 adult person
@@ -40,7 +39,6 @@ Scenario: Search plane tickets for a round trip for 1 adult person
 	Then every item on the outcome first page has '2' flights
 	And the flight/s have the right direction
 	And every item on the outcome first page has '1' seat
-	And no duplicates - not sure I need it
 
 @roundtrip @two
 Scenario: Search plane tickets for a round trip for 2 adult person
@@ -54,4 +52,3 @@ Scenario: Search plane tickets for a round trip for 2 adult person
 	Then every item on the outcome first page has '2' flights
 	And the flight/s have the right direction
 	And every item on the outcome first page has '2' seat
-	And no duplicates - not sure I need it

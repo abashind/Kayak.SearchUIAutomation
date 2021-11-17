@@ -69,11 +69,6 @@ namespace JuribaKayak.SearchUIAutomation.Steps
             }
         }
 
-        [Then(@"no duplicates - not sure I need it")]
-        public void ThenNoDuplicates_NotSureINeedIt()
-        {
-        }
-
         #endregion
     }
 }
