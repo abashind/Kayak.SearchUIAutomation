@@ -146,7 +146,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0",
                             "UFA",
-                            "MOW",
+                            "SVO",
                             "2021-11-25",
                             "--"});
 #line 22
@@ -164,16 +164,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.And("every item on the outcome first page has \'1\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
- testRunner.And("no duplicates - not sure I need it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Search plane tickets for a round trip for 1 adult person", new string[] {
                 "roundtrip",
-                "single"}, SourceLine=31)]
+                "single"}, SourceLine=30)]
         public virtual void SearchPlaneTicketsForARoundTripFor1AdultPerson()
         {
             string[] tagsOfScenario = new string[] {
@@ -181,7 +178,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "single"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search plane tickets for a round trip for 1 adult person", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -207,7 +204,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "Adults",
                             "1"});
-#line 33
+#line 32
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table3, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -223,26 +220,23 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0",
                             "UFA",
-                            "MOW",
+                            "SVO",
                             "2021-11-25",
                             "2021-11-27"});
-#line 36
+#line 35
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table4, "And ");
 #line hidden
-#line 39
+#line 38
  testRunner.When("search button is pressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 40
+#line 39
  testRunner.Then("every item on the outcome first page has \'2\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 41
+#line 40
  testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 41
  testRunner.And("every item on the outcome first page has \'1\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 43
- testRunner.And("no duplicates - not sure I need it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -250,7 +244,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Search plane tickets for a round trip for 2 adult person", new string[] {
                 "roundtrip",
-                "two"}, SourceLine=45)]
+                "two"}, SourceLine=43)]
         public virtual void SearchPlaneTicketsForARoundTripFor2AdultPerson()
         {
             string[] tagsOfScenario = new string[] {
@@ -258,7 +252,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "two"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search plane tickets for a round trip for 2 adult person", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 46
+#line 44
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -284,7 +278,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table5.AddRow(new string[] {
                             "Adults",
                             "2"});
-#line 47
+#line 45
  testRunner.Given("the next amount of travelers wants to fly out:", ((string)(null)), table5, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -300,26 +294,23 @@ this.ScenarioInitialize(scenarioInfo);
                             "0",
                             "0",
                             "UFA",
-                            "MOW",
+                            "SVO",
                             "2021-11-25",
                             "2021-11-27"});
-#line 50
+#line 48
  testRunner.And("the rest of search field are filled out with the next values:", ((string)(null)), table6, "And ");
 #line hidden
-#line 53
+#line 51
  testRunner.When("search button is pressed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 54
+#line 52
  testRunner.Then("every item on the outcome first page has \'2\' flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 55
+#line 53
  testRunner.And("the flight/s have the right direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 54
  testRunner.And("every item on the outcome first page has \'2\' seat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 57
- testRunner.And("no duplicates - not sure I need it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

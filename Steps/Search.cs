@@ -53,6 +53,25 @@ namespace JuribaKayak.SearchUIAutomation.Steps
         [Then(@"the flight/s have the right direction")]
         public void ThenTheFlightHasTheRightDirection()
         {
+            using (new AssertionScope())
+            {
+                foreach (var item in resultPage.TicketItems)
+                {
+                    CLogs.Info($"Checking To flight.");
+                    item.Flights.ToArray()[0].From.Should().Be(fps.From,
+                        "The To flight should have right origin airport.");
+                    item.Flights.ToArray()[0].To.Should().Be(fps.To,
+                        "The To flight should have right destination airport.");
+
+                    if (fps.WhenBack == "--") continue;
+
+                    CLogs.Info($"Checking Back flight.");
+                    item.Flights.ToArray()[1].From.Should().Be(fps.To,
+                        "The Back flight should have right origin airport.");
+                    item.Flights.ToArray()[1].To.Should().Be(fps.From,
+                        "The Back flight should have right destination airport.");
+                }
+            }
         }
 
         [Then(@"every item on the outcome first page has '(.*)' seat")]
