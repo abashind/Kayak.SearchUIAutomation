@@ -5,15 +5,6 @@
 	I want to: search the tickets using the search form
 	So that: search outcome will show tickets that correspond to search criteria
 
-	PS:
-	We could've used a scenario outline here but scenarios are too different for that.
-
-	Basically the search functionality itself is one of the first candidates for API testing, 
-	but the test assignment specification requires to use Selenium.
-
-	Ideally screenshots should be tacken when smth goes wrong but for that I need to 
-	implement scrolling to the desired ticket item which can't be done due to lack of time.
-
 @oneway @single
 Scenario: Search plane tickets in one-way direction for 1 adult person
 	Given the next amount of travelers wants to fly out:
