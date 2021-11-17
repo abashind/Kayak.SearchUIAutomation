@@ -1,4 +1,4 @@
-name: .NET
+name: Build the solution and run tests
 
 on:
   push:
