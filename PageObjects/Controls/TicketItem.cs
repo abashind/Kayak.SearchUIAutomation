@@ -16,7 +16,7 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects.Controls
 
         public int NumberOfSeats => GetNumberOfSeats();
 
-        private By flightLocator = By.ClassName("flight");
+        private By flightLocator = By.CssSelector(".flight > div");
 
         private By totalPriceLocator = By.ClassName("price-total");
 
@@ -28,10 +28,9 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects.Controls
 
         #region Method
 
-        public IEnumerable<Flight> GetFlights()
-        {
-            yield return new Flight(By.Id(""));
-        }
+        public IEnumerable<Flight> GetFlights() => Driver.FindElements(flightLocator)
+            .Select(e => new Flight(By.Id(e.GetAttribute("id"))));
+
         private int GetNumberOfSeats()
         {
             if (!el.ElementExists(totalPriceLocator))
