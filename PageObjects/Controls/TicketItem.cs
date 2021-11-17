@@ -12,8 +12,6 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects.Controls
 
         #region Fields and properties
 
-        private IWebElement el => Driver.FindElementT(Locator);
-
         public int NumberOfFlights() => el.FindElements(flightLocator).Count;
 
         public int NumberOfSeats => GetNumberOfSeats();

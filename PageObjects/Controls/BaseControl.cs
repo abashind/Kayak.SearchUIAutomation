@@ -14,6 +14,8 @@ namespace JuribaKayak.SearchUIAutomation.PageObjects.Controls
             Driver = DriverSetup.CurrentDriver;
         }
 
+        protected IWebElement el => Driver.FindElementT(Locator);
+
         #region Fields and properties
 
         public readonly By Locator;
